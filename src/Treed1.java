@@ -1,5 +1,7 @@
 import java.util.Date;
 public class Treed1 extends Thread {
+    private final Object Treed1 = new Thread();
+    ThreadsManager mng=new ThreadsManager();
     public  void run1(){
         boolean cycle=true;
         Log log=new Log();
@@ -9,8 +11,7 @@ public class Treed1 extends Thread {
             log.logger("Thread1 ran");
            time2=new Date().getTime();
             if(time2-time1>5000) {
-                this.interrupt();
-                log.logger("Thread1 stopped");
+                mng.manager(Treed1);
                 break;
             }
         }
