@@ -1,0 +1,2 @@
+public class Treed1 {
+}
